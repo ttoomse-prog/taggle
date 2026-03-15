@@ -1,4 +1,4 @@
-# iXBRL Tagging Decision Tree
+# Taggle - iXBRL Tagging Decision Tree
 
 An interactive React decision tree guide for tagging iXBRL financial statements. Helps taggers navigate through the decision points and generate a personalized tagging strategy.
 
@@ -17,18 +17,17 @@ An interactive React decision tree guide for tagging iXBRL financial statements.
 - Lucide React (icons)
 - CSS3
 
-## Development
+## Getting Started
 
 ### Prerequisites
-
 - Node.js 16+ and npm
 
-### Local Setup
+### Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ixbrl-tagging-decision-tree.git
-cd ixbrl-tagger
+git clone https://github.com/yourusername/taggle.git
+cd taggle
 ```
 
 2. Install dependencies:
@@ -43,9 +42,8 @@ npm run dev
 
 The app will be available at `http://localhost:5173`
 
-### Build
+### Build for Production
 
-To create a production build:
 ```bash
 npm run build
 ```
@@ -54,58 +52,16 @@ The built files will be in the `dist/` directory.
 
 ## Deploy to Netlify
 
-### Option 1: Deploy via Netlify UI (Recommended)
+### Quick Deploy
 
-1. Push your code to GitHub:
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-2. Go to [netlify.com](https://netlify.com) and sign in with your GitHub account
-
-3. Click "Add new site" → "Import an existing project"
-
+1. Push your code to GitHub
+2. Go to [netlify.com](https://netlify.com)
+3. Click "New site from Git"
 4. Select your GitHub repository
-
-5. Configure the build settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-
+5. Netlify will auto-detect build settings
 6. Click "Deploy site"
 
-Netlify will automatically build and deploy whenever you push to main.
-
-### Option 2: Deploy via CLI
-
-1. Install Netlify CLI:
-```bash
-npm install -g netlify-cli
-```
-
-2. Deploy:
-```bash
-netlify deploy
-```
-
-For production deployment:
-```bash
-netlify deploy --prod
-```
-
-### Option 3: Manual Deployment
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Drag and drop the `dist/` folder onto [netlify.com](https://netlify.com)
-
-## Environment & Configuration
-
-No environment variables required. The app runs with static assets only.
+Netlify will automatically rebuild and deploy whenever you push to main.
 
 ## Usage
 
@@ -118,7 +74,7 @@ No environment variables required. The app runs with static assets only.
 ## File Structure
 
 ```
-ixbrl-tagger/
+taggle/
 ├── src/
 │   ├── components/
 │   │   ├── DecisionTree.jsx      # Main component
@@ -128,6 +84,7 @@ ixbrl-tagger/
 ├── index.html                    # HTML template
 ├── vite.config.js               # Vite configuration
 ├── package.json                 # Dependencies
+├── netlify.toml                 # Netlify config
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # This file
 ```
@@ -162,12 +119,8 @@ Modify `src/components/DecisionTree.css` to customize colors, fonts, and layout.
 
 ## License
 
-This project is open source. Please refer to LICENSE file if present.
-
-## Contact
-
-For questions or suggestions about the decision tree logic, contact the FRC Digital Reporting team.
+Open source. Built for better iXBRL tagging.
 
 ---
 
-**Built with ❤️ for better iXBRL tagging**
+**Built with ❤️ for the FRC Digital Reporting team**
